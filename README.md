@@ -58,3 +58,19 @@ You really should only need to install BeautifulSoup if you don't have it.  Ever
 ## License
 
 [MIT](https://tldrlegal.com/license/mit-license)
+
+## How To
+
+### Redis Docker
+
+```bash
+# Run Redis Docker
+docker run -d --name redis-server -p 6379:6379 redis
+# Set up network
+docker network create page-tracker-network
+# Run Redis Docker on network
+docker network connect page-tracker-network redis-server
+# Run Redis CLI
+docker run -it --network page-tracker-network --rm redis redis-cli -h redis-server
+
+```
