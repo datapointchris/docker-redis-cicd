@@ -11,6 +11,9 @@ redis = "^5.0.1"
 flask = "^3.0.0"
 pytest-timeout = "^2.1.0"
 requests = "^2.31.0"
+fastapi = "^0.103.2"
+pydantic = "^2.4.2"
+sqlalchemy = "^2.0.21"
 
 
 [tool.poetry.group.dev.dependencies]
